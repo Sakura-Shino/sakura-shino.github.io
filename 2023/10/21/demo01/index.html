@@ -34,20 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>SHINO的博客</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="问其姓氏，是金陵人，客此 - Shino - SHINO的博客">
+  <title>demo01 - しの的博客</title>
+  <meta name="keywords" content="demo,test,null">
+  <meta desc name="description" content="shino的博客 - Shino - しの的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="SHINO的博客">
+<meta property="og:title" content="demo01">
 <meta property="og:url" content="https://sakura-shino.github.io/2023/10/21/demo01/index.html">
-<meta property="og:site_name" content="SHINO的博客">
+<meta property="og:site_name" content="しの的博客">
 <meta property="og:description" content="demo01">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-21T14:04:26.455Z">
-<meta property="article:modified_time" content="2023-10-21T14:04:52.479Z">
+<meta property="article:modified_time" content="2023-10-23T14:51:40.508Z">
 <meta property="article:author" content="Shino">
+<meta property="article:tag" content="demo">
+<meta property="article:tag" content="test">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -269,103 +271,6 @@ button {
   position: relative;
   overflow: hidden;
   margin-bottom: -100px;
-}
-.cover-wrapper .cover-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-}
-.cover-wrapper .cover-bg.lazyload.loaded {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
 }
 .cover-wrapper .cover-body {
   z-index: 1;
@@ -716,6 +621,71 @@ button {
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
 }
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: 'dark';
@@ -1006,7 +976,7 @@ button {
   height: 64px;
 }
 .l_header .nav-sub {
-  max-width: 1080px;
+  max-width: 1320px;
   margin: auto;
 }
 .l_header .nav-sub .title {
@@ -1588,7 +1558,7 @@ ul.list-v >li>a:hover {
   right: calc(100% - 0.5 * 16px);
 }
 #wrapper {
-  max-width: 1080px;
+  max-width: 1320px;
   margin: auto;
 }
 @media screen and (min-width: 2048px) {
@@ -1638,11 +1608,11 @@ ul.list-v >li>a:hover {
 }
 @media screen and (max-width: 2048px) {
   .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
+    max-width: 1352px;
+    left: calc((100% - 1352px) * 0.5);
   }
 }
-@media screen and (max-width: 1112px) {
+@media screen and (max-width: 1352px) {
   .l_header {
     left: 0;
     border-radius: 0;
@@ -1792,9 +1762,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698044877820),
+    lastupdate: new Date(1698078414165),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate"],
+      for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -1802,7 +1772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           friendlyShow: true
         },
         runtime: {
-          data: "2020/01/01",
+          data: "2023/10/23",
           unit: "天"
         }
       }
@@ -2259,7 +2229,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2363,7 +2333,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2457,7 +2427,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://s2.loli.net/2023/10/22/UkpV4gqAni2RtDy.jpg"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2473,7 +2443,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <input type="text" class="input u-search-input" placeholder="Search..." />
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
@@ -2486,7 +2456,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <i class='fa-solid fa-rss fa-fw'></i><p>博客</p>
+              <i class='fa-solid fa-blog fa-fw'></i><p>博客</p>
             </a>
           
             <a href="/tags/"
@@ -2543,11 +2513,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/demo01/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO的博客">
+    <meta itemprop="name" content="しの的博客">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO的博客">
-    <meta itemprop="description" content="问其姓氏，是金陵人，客此">
+    <meta itemprop="name" content="しの的博客">
+    <meta itemprop="description" content="shino的博客">
   </span>
   
 
@@ -2561,9 +2531,60 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        demo01
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://s2.loli.net/2023/10/21/ixtBSdGTb9fCAnK.jpg" class="lazyload" data-srcset="https://s2.loli.net/2023/10/21/ixtBSdGTb9fCAnK.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">黄生</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%88%86%E7%B1%BB1/" itemprop="url"><span itemprop="name">分类1</span></a>
       </span>
+    
+  </div>
+
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/demo/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>demo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/test/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>test</p></a></div>
+  <span hidden itemprop="keywords">demo test</span>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-21T22:04:26+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年10月21日</p>
+  </a>
+</div>
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
@@ -2595,10 +2616,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-21T22:04:52+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-23T22:51:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年10月21日</p>
+    <p>更新于：2023年10月23日</p>
   </a>
 </div>
 
@@ -2606,6 +2627,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/demo/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>demo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/test/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>test</p></a></div>
+  <span hidden itemprop="keywords">demo test</span>
+
 
         
       
@@ -2617,7 +2642,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://sakura-shino.github.io/2023/10/21/demo01/&title= - SHINO的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://sakura-shino.github.io/2023/10/21/demo01/&title=demo01 - しの的博客&summary="
           
           >
           
@@ -2629,7 +2654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sakura-shino.github.io/2023/10/21/demo01/&title= - SHINO的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sakura-shino.github.io/2023/10/21/demo01/&title=demo01 - しの的博客&summary="
           
           >
           
@@ -2639,17 +2664,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://sakura-shino.github.io/2023/10/21/demo01/&title= - SHINO的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
     
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/UlEQVR42u3aS3ICMQwFQO5/6WRPhbJ+Q0bQ3gFmbLc3r6R5/Bh/jgcCMGDAgAEDZg3MozhePjg473n+aT+n/02dBwwYMGDAgAGzDyYcgIIbqs7PgkfXC18MGDBgwIABA2YtzDEADc+PQoQDWnd/YMCAAQMGDJivg8kWmqIFq+w8MGDAgAEDBgyYqcBWbeBl9wEGDBgwYMCAAXP1iz7RA2V/v10nEgwYMGDAgAHzNpjpBtd/fy6fBwwYMGDAgAGzBqY7qoWrbLDLNvDK5wEDBgwYMGDArIGpBqToQaYLUdGLKu8fDBgwYMCAAbMGZqqRVg1y3QvIXky6UAUGDBgwYMCAuS1Mt6FWLWBVQasg4aAJBgwYMGDAgFkDky38dAtFVcDoc6oXAgYMGDBgwIDZBxMNRFMv7mQLVm9/HhgwYMCAAQNmHUz3hZvqxtMNsWaQazfcwIABAwYMGDC3hbmq8JRdr1uIKr94BAYMGDBgwIBZBzNdCJoCmgpu4fOCAQMGDBgwYNbAZAtOUYjuhqsBsL0uGDBgwIABA2YNTHRD0cLRVIEq2wCs/g4GDBgwYMCA+RyY6samC1vZAlO2QVeu4IEBAwYMGDBgbgPTbXRVYbrrV4PcsREIBgwYMGDAgFkL0w1I3QZZNvBNzQMDBgwYMGDA7IPpFo6yQTAKMt1wC68PBgwYMGDAgFkHc3XBKXuAaqCsXggYMGDAgAED5vNgphpu0ed2XzyKBryXzwEDBgwYMGDAfAzMVQWqcgArjvC6YMCAAQMGDJg1MFMFoGyw6jbYuuDHgAcGDBgwYMCAuT3MdGDqHvh0kOj32eAIBgwYMGDAgNkLM/UCTrXgdHWBLHwxYMCAAQMGDJi1MNUAFj34VBCbCpJgwIABAwYMGDDdwlL0+6safWDAgAEDBgyY74XJzssGv+78cGAEAwYMGDBgwKyFyTbcsiNbQIo21qoNQjBgwIABAwbMfpjpxlW2UJRt5FUD5vH5YMCAAQMGDJg1MAYYMGDAgAEDZtn4BYPkY6xNVPG1AAAAAElFTkSuQmCC">
+          </div>
+        </div>
       
     
       
@@ -2675,9 +2698,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/2023/10/21/demo02/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2023年10月21日</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>demo02</p>
           <p class='content'>demo02
-</p>
+标题（可选）Windows 10不是為所有人設計,而是為每個人設計嵌套测试： 请坐和放宽，我正在帮你搞定一切… Folding 测试： 点击查看更多                ...</p>
         </a>
       
       
@@ -2787,7 +2810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2828,8 +2851,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
+              <a href="/"
+                class="social fa-solid fa-blog flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
@@ -2860,13 +2883,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
       
     
       
@@ -3143,7 +3159,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"Sakura-Shino/blog_comments","repo-id":"R_kgDOKkA3lQ","category":"Announcements","category-id":"DIC_kwDOKkA3lc4CaXvi","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -3261,6 +3277,59 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+
+
+  <script>
+  let imgs = ["https://s2.loli.net/2023/10/22/UkpV4gqAni2RtDy.jpg"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+      ParallaxWindow = document.querySelector("html");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/plugins/parallax.js').then(()=>{
+      parallax()
+    })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax);
+  }
+</script>
 
 
 
@@ -3438,7 +3507,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO的博客","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"问其姓氏，是金陵人，客此"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/21/demo01/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO的博客","url":"https://sakura-shino.github.io/","keywords":null,"description":"问其姓氏，是金陵人，客此","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"问其姓氏，是金陵人，客此"},"publisher":{"@type":"Organization","name":"SHINO的博客","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"问其姓氏，是金陵人，客此","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/21/demo01/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/21/demo01/","wordCount":0,"datePublished":"2023-10-21T14:04:26.455Z","dateModified":"2023-10-21T14:04:52.479Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"しの的博客","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"shino的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"しの的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/分类1/","name":"分类1"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/21/demo01/","name":"demo01"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"しの的博客","url":"https://sakura-shino.github.io/","keywords":null,"description":"shino的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"shino的博客"},"publisher":{"@type":"Organization","name":"しの的博客","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"demo01","description":"shino的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/21/demo01/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"しの的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/21/demo01/","wordCount":0,"datePublished":"2023-10-21T14:04:26.455Z","dateModified":"2023-10-23T14:51:40.508Z","articleSection":"分类1","keywords":"demo,test","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
