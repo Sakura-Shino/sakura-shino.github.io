@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://sakura-shino.github.io/archives/2023/"/>
+  
+  <link rel="canonical" href="https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,18 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023 - SHINO’S BLOG</title>
-  <meta name="keywords" content="null">
+  <title>Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019) - SHINO’S BLOG</title>
+  <meta name="keywords" content="opencv,cuda,null">
   <meta desc name="description" content="SHINO的博客 - Shino - SHINO’S BLOG">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="SHINO’S BLOG">
-<meta property="og:url" content="https://sakura-shino.github.io/archives/2023/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10编译安装opencv4.8.0 with cuda (MinGW&#x2F;VS2019)">
+<meta property="og:url" content="https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/index.html">
 <meta property="og:site_name" content="SHINO’S BLOG">
-<meta property="og:description" content="SHINO的博客">
+<meta property="og:description" content="测试一下gitignore">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-10-26T15:28:01.888Z">
+<meta property="article:modified_time" content="2023-10-26T15:23:35.679Z">
 <meta property="article:author" content="Shino">
+<meta property="article:tag" content="opencv">
+<meta property="article:tag" content="cuda">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2302,7 +2306,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2675,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2745,15 +2749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-            <div class='post-wrapper'>
-              <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="SHINO’S BLOG">
@@ -2763,355 +2759,219 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="SHINO的博客">
   </span>
   
-  
-    <div class='pin'>
-      <img alt="Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019)" src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4cc.svg'/>
-    </div>
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019)
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/res/img/Sesshoumaru-2.jpg" class="lazyload" data-srcset="/res/img/Sesshoumaru-2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">黄生</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opencv/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>opencv</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cuda/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>cuda</p></a></div>
+  <span hidden itemprop="keywords">opencv cuda</span>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-26T23:28:01+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年10月26日</p>
+  </a>
+</div>
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>测试一下gitignore</p>
+
+  </div>
+  
   
     
-    <h2 class="article-title" pin itemprop="name headline">
-      <a href="/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/"  itemprop="url">
-        Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019)
-      </a>
-    </h2>
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
-  <div class='md article-desc' itemprop="articleBody">
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-26T23:23:35+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年10月26日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opencv/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>opencv</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cuda/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>cuda</p></a></div>
+  <span hidden itemprop="keywords">opencv cuda</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        测试一下gitignore
-
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/&title=Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019) - SHINO’S BLOG&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/&title=Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019) - SHINO’S BLOG&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFKElEQVR42u3aQXIbMRADQP3/0849KdVyMKAcJ82bY0tLNveCYF5f1resFwLw4C3w4C3w4K0C/Ctcf3zhb/8+/dy73x8f6PDz7563PdepF3jw4MGDBw8ePHjwTfjWAW9fVArYusitF3jw4MGDBw8ePHjwN+AfA8Dhz2kAm0JOv/dpv61ABR48ePDgwYMHDx78T4CfBp/0Iqfgpz+nLwJ48ODBgwcPHjx48P8SfKvQ2A5apRcCHjx48ODBgwcPHvxPgm9tfDvgNA066fO2F/dtk2TgwYMHDx48ePDgwS+Cyv/6c+wFHjx48ODBgwcPHnwBfru2Aaf1/dsXZ7vPYy/w4MGDBw8ePHjw4AvwtweUWiDbwabp/q/5gAcPHjx48ODBgwdfgN8OMt0GOn3uKfSnLqpWhIAHDx48ePDgwYMHH8BPwU83fvr7U8ht8dJ6cZ4KHPDgwYMHDx48ePDgm/CfKjzS57aCUKuIOb148ODBgwcPHjx48OA/AT/d+LSAmF5kOnA0DjbLAuZ4v+DBgwcPHjx48ODBF+CfNnoKlR58+vzTv78Ft/UADx48ePDgwYMHD/4G/DTAtIPYFiwNYqeA60IHPHjw4MGDBw8ePPgC/DawtINK63mtC5i+oI/nBw8ePHjw4MGDBw++AP8K1zQgTTc+BU8DXFrYxEESPHjw4MGDBw8ePPgL8NMHbT/3dIC0oEkDT7q/40IFPHjw4MGDBw8ePPgL8K1gkR5kW2RMg9Wtgaa33w8ePHjw4MGDBw8e/AX4FtT0QF/hmhYuaTDcFj/gwYMHDx48ePDgwd+EP914q5hIDzQFbf19+nzw4MGDBw8ePHjw4G/AT4HSDW4HleICIix82kEKPHjw4MGDBw8ePPgG/GnRsL2YW8XFrf1cez548ODBgwcPHjx48AX4doCaDjKlhUKrqGkHuG9LruDBgwcPHjx48OD/K/hbg0TpwdoBZwrZHmgCDx48ePDgwYMHD/4T8F/LNYVoBZr0OdO/W79I4MGDBw8ePHjw4MEX4beQ28C0PVAa4E6h0wGptwNN4MGDBw8ePHjw4MEv4NNiYVwAhINGaeBKLyAtYMYBCjx48ODBgwcPHjz44v/HtwaG0qDVLk7Si2oFpuPkCh48ePDgwYMHDx78AH4agLYFQVpEbEG2QbFVwIAHDx48ePDgwYMH34DffmEamNJCoX2haXESFz3gwYMHDx48ePDgwRfh08Gi6WodZFqYpC/S9AV4fBHAgwcPHjx48ODBg78AnwaN7QBRGrROD54WO6fnOw504MGDBw8ePHjw4MEX4KdFQSsgbQebpnCtz0+LGvDgwYMHDx48ePDgb8CnRUIamKYgabDbFi/tYAUePHjw4MGDBw8e/A34tIBoXVAcSMKBpDSwbYsb8ODBgwcPHjx48OAb8GkB0DpQCjkNXK1iZvt88ODBgwcPHjx48OAb8Nt1G2oLmO5rG+DevpDgwYMHDx48ePDgwRfgW3CtoiENaunAUatIOX4RwIMHDx48ePDgwYMvwk8DUxpgWoDbgaTWQNf44sCDBw8ePHjw4MGDvwCfBojt93yqaNlewLZIAQ8ePHjw4MGDBw/+J8G3/30a7KbBaBrYjv3AgwcPHjx48ODBg/+L4dMBoLSASINSGrSmhRF48ODBgwcPHjx48Dfh0y+cFhnbgan2BaYDW+MBLPDgwYMHDx48ePDgi/DbwZ1twEiDy3Rf6UWkwRI8ePDgwYMHDx48+Bvw1mcXePDgLfDgLfDgrcX6BRSDNUf2NekRAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-26T23:28:01+08:00">2023-10-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-            </div>
-          
+
+
         
-          
-            <div class='post-wrapper'>
-              <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/26/从0搭建博客/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-    <div class='pin'>
-      <img alt="从零使用Hexo框架搭建个人博客小记" src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4cc.svg'/>
-    </div>
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" pin itemprop="name headline">
-      <a href="/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"  itemprop="url">
-        从零使用Hexo框架搭建个人博客小记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        拥有一个个人博客真的是一件很酷的事呢！
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/'>
+          <p class='title'>从零使用Hexo框架搭建个人博客小记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>拥有一个个人博客真的是一件很酷的事呢！
 这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍。
 前言平台: Windows
-博客采用Hexo框架搭建，搭建过程理论上可以完全参照Hexo中文文档进行配置。
-Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照Volantis中文文档进行配置。
-具体过程还可...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-26T22:34:19+08:00">2023-10-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+博客采用Hexo框架搭建...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-            </div>
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-      
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/demo02/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
   
-  
-  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/demo02/"  itemprop="url">
-        demo02
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        标签显示测试
-标题（可选）Windows 10不是為所有人設計,而是為每個人設計嵌套测试： 请坐和放宽，我正在帮你搞定一切… Folding 测试： 点击查看更多                             不要说我们没有警告过你我们都有不顺利的时候                          
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T22:04:37+08:00">2023-10-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="sep"></span><a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/">小类2</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">测试</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/" itemprop="url"><span itemprop="name">小类2</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/demo02/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/demo01/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/demo01/"  itemprop="url">
-        demo01
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        demo01
-测试图片路径能否被正确识别
-
-这是引用的话
+  </article>
 
 
-这句话高亮
 
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T22:04:26+08:00">2023-10-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="sep"></span><a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/">小类1</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">测试</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/" itemprop="url"><span itemprop="name">小类1</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/demo01/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/hello-world/"  itemprop="url">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T17:10:54+08:00">2023-10-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3120,201 +2980,42 @@ Qu...
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/res/img/Sesshoumaru-2.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-          <p>问其姓氏，是金陵人，客此</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fa-solid fa-blog flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://www.bilibili.com/"
-              class="social fa-brands fa-bilibili flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Sakura-Shino/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
-            active-action="action-categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
-            active-action="action-categoriesE6B58BE8AF95"
-            ><div class='name'>测试</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/"
-            active-action="action-categoriesE6B58BE8AF95E5B08FE7B1BB1"
-            ><div class='name'>小类1</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/"
-            active-action="action-categoriesE6B58BE8AF95E5B08FE7B1BB2"
-            ><div class='name'>小类2</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/cuda/" style="font-size: 14px; color: #999">cuda</a> <a href="/tags/demo/" style="font-size: 19px; color: #777">demo</a> <a href="/tags/hello-world/" style="font-size: 14px; color: #999">hello world</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/opencv/" style="font-size: 14px; color: #999">opencv</a> <a href="/tags/test/" style="font-size: 24px; color: #555">test</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>5 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>920 字</div>
-        </div>
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-10-26 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3338,13 +3039,14 @@ Qu...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3353,14 +3055,14 @@ Qu...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4027,7 +3729,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/archives/2023/","name":"2023年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/","name":"Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10编译安装opencv4.8.0 with cuda (MinGW/VS2019)","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/","wordCount":0,"datePublished":"2023-10-26T15:28:01.888Z","dateModified":"2023-10-26T15:23:35.679Z","articleSection":"教程","keywords":"opencv,cuda","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
