@@ -1874,10 +1874,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698336591278),
+    lastupdate: new Date(1698480490581),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
-      for_post: ["toc"],
+      for_post: ["blogger","toc","category","tagcloud"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2302,7 +2302,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2675,7 +2675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper  dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2784,12 +2784,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        拥有一个个人博客真的是一件很酷的事呢！
+        拥有个人博客真的是一件很酷的事呢！
 这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍。
 前言平台: Windows
 博客采用Hexo框架搭建，搭建过程理论上可以完全参照Hexo中文文档进行配置。
 Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照Volantis中文文档进行配置。
-具体过程还可...
+具体过程还可以参...
       
     
   </div>
@@ -2849,9 +2849,11 @@ Hexo框架需要额外配置主题才能有好看的界面，我博客的主题�
   
   
   
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2023/10/21/demo02/">
+        <img itemprop="image" class='headimg' alt="demo02" src='/res/img/OIP-C-2.jpg'/>
+      </a>
+    </div>
   
   
     
@@ -2863,10 +2865,7 @@ Hexo框架需要额外配置主题才能有好看的界面，我博客的主题�
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        标签显示测试
-标题（可选）Windows 10不是為所有人設計,而是為每個人設計嵌套测试： 请坐和放宽，我正在帮你搞定一切… Folding 测试： 点击查看更多                             不要说我们没有警告过你我们都有不顺利的时候                          
-      
+      <div class="note "><p>此处为摘要，这是测试样例2。上面的图片为headimg⬆</p></div>
     
   </div>
   
@@ -3217,7 +3216,7 @@ Qu...
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>915 字</div>
+          <div>932 字</div>
         </div>
       
 
@@ -3228,7 +3227,7 @@ Qu...
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2023-10-27 日</div>
+          <div id="last-update-show">2023-10-28 日</div>
         </div>
       
     </div>
@@ -3283,14 +3282,14 @@ Qu...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
