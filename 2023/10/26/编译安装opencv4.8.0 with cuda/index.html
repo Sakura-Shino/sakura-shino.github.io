@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://sakura-shino.github.io/archives/2023/10/"/>
+  
+  <link rel="canonical" href="https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,18 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023/10 - SHINO’S BLOG</title>
-  <meta name="keywords" content="null">
+  <title>Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019 - SHINO’S BLOG</title>
+  <meta name="keywords" content="opencv,cuda,null">
   <meta desc name="description" content="SHINO的博客 - Shino - SHINO’S BLOG">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="SHINO’S BLOG">
-<meta property="og:url" content="https://sakura-shino.github.io/archives/2023/10/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10编译安装 Opencv 4.8.0+contrib+CUDA C++&#x2F;Python版本 Mingw64&#x2F;VS2019">
+<meta property="og:url" content="https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/index.html">
 <meta property="og:site_name" content="SHINO’S BLOG">
-<meta property="og:description" content="SHINO的博客">
+<meta property="og:description" content="没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA 环境准备 OpenCV 4.8.0 支持新版CUDA(CUDA 12.x)了！！！  mingw64 mingw-builds-binaries&#x2F;releases 推荐使用 mingw64_x86_64-11.2.0-release-posix-seh-rt_v9-rev1    版本推荐11.2.0。高版本或低版本">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-10-26T15:28:01.888Z">
+<meta property="article:modified_time" content="2023-10-30T17:42:25.734Z">
 <meta property="article:author" content="Shino">
+<meta property="article:tag" content="opencv">
+<meta property="article:tag" content="cuda">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2675,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2745,15 +2749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-            <div class='post-wrapper'>
-              <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="SHINO’S BLOG">
@@ -2763,362 +2759,474 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="SHINO的博客">
   </span>
   
-  
-    <div class='pin'>
-      <img alt="Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019" src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4cc.svg'/>
-    </div>
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/res/img/Sesshoumaru-2.jpg" class="lazyload" data-srcset="/res/img/Sesshoumaru-2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">黄生</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opencv/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>opencv</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cuda/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>cuda</p></a></div>
+  <span hidden itemprop="keywords">opencv cuda</span>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-26T23:28:01+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年10月26日</p>
+  </a>
+</div>
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p><mark><strong><del>没有CUDA怎么跑模型？</del> 快来手动编译Opencv with CUDA</strong></mark></p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><blockquote>
+<p><code>OpenCV 4.8.0</code> 支持新版CUDA(<code>CUDA 12.x</code>)了！！！</p>
+</blockquote>
+<h3 id="mingw64"><a href="#mingw64" class="headerlink" title="mingw64"></a><a target="_blank" rel="noopener" href="https://github.com/niXman/mingw-builds-binaries/releases">mingw64</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/niXman/mingw-builds-binaries/releases">mingw-builds-binaries&#x2F;releases</a><blockquote>
+<p>推荐使用 <code>mingw64_x86_64-11.2.0-release-posix-seh-rt_v9-rev1 </code></p>
+</blockquote>
+</li>
+<li>版本推荐<code>11.2.0</code>。高版本或低版本都会在编译OpenCV的附加功能时会出现各种问题。<br><code>8.1.0 8.5.0 11.2.0 13.1.0</code> 版本均已试验，其中<code>11.2.0</code>最为稳定。</li>
+<li><code>posix</code>: 在 Win 下，MinGW 必须是 posix 接口的 thread 库，而不是 Windows native thread 库前车之鉴。参照<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/5957695534?red_tag=1374859318&traceid=">前车之鉴</a>。</li>
+</ul>
+<h3 id="VS2019"><a href="#VS2019" class="headerlink" title="VS2019"></a><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">VS2019</a></h3><p><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">VS2019下载</a></p>
+<h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a><a target="_blank" rel="noopener" href="https://cmake.org/">CMake</a></h3><p><a target="_blank" rel="noopener" href="https://cmake.org/download/">CMake下载</a>:　较新的版本均可。</p>
+<h3 id="CUDA-Cuda-Toolkit-cudnn"><a href="#CUDA-Cuda-Toolkit-cudnn" class="headerlink" title="CUDA: Cuda Toolkit + cudnn"></a>CUDA: Cuda Toolkit + cudnn</h3><p><code>OpenCV&gt;=4.8.0</code> 支持 <code>CUDA 12.x</code><br><code>OpenCV==4.8.0</code> 在编译<code>CUDA Toolkit 12.x</code>时存在一些函数类型的小问题，需要手动修改源码或下载dev版源码。<a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/pull/23948">#23948</a></p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p><code>3.10.x</code>为宜。</p>
+<h3 id="NO-Anaconda"><a href="#NO-Anaconda" class="headerlink" title="NO Anaconda!!!"></a><mark><strong>NO Anaconda!!!</strong></mark></h3><p>Anaconda中的库会与CMake环境冲突，导致Opencv及其依赖库在编译和链接时存在接口、版本等无穷无尽的问题。例如<code>HDF5, protobuf</code>等。<br>但凡错误信息中出现带有<code>Anaconda/lib</code>字段的路径，都是上述原因。<br>错误形式一般为<code>undefined reference to ...</code>例如<code>undefined reference to `H5Pset_fapl_mpio&#39;</code>。<br>缺少依赖库请老老实实去一个一个下载。<br>Linux中解决冲突的方法请参阅<a target="_blank" rel="noopener" href="https://blog.csdn.net/billbliss/article/details/112171528">anaconda 库冲突问题</a>和<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95497832">Linux中usr&#x2F;lib 与 Anaconda环境lib冲突的问题</a>。Windows中方法同理。</p>
+<blockquote>
+<p> <span style="font-size: 1.1em;"><strong>如何屏蔽Anaconda</strong></span></p>
+<ol>
+<li>可以通过修改<code>CMakeLists.txt</code>中的<code>find_package</code>语句来解决。例如：<code>SET (ONNXRUNTIME_DIR path/to/onnxruntime</code>)</li>
+<li>暂时将Anaconda有关路径移出环境变量，或在Anaconda中移除相关库。</li>
+<li>(<strong>最优方案</strong>)在系统环境变量中设置指定的库路径，且一定要将位置放在Anaconda路径之前。<br><em>优先级比较：系统环境变量 &gt; 用户环境变量  位置靠前 &gt; 位置靠后</em></li>
+</ol>
+</blockquote>
+<h3 id="OpenCV-OpenCV-contrib"><a href="#OpenCV-OpenCV-contrib" class="headerlink" title="OpenCV + OpenCV-contrib"></a><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv">OpenCV</a> + <a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib">OpenCV-contrib</a></h3><p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv">下载OpenCV源码</a><br><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib">下载OpenCV-contrib源码</a></p>
+<h3 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h3><p><a target="_blank" rel="noopener" href="https://www.hdfgroup.org/downloads/hdf5/">HDF5</a><br><a target="_blank" rel="noopener" href="https://zlib.net/">zlib</a><br>其余根据需求和缺失情况自行下载。</p>
+<h3 id="我的版本"><a href="#我的版本" class="headerlink" title="我的版本"></a>我的版本</h3><pre><code class="log">CMake 3.27.5
+VS2019
+mingw64_x86_64-11.2.0-release-posix-seh-rt_v9-rev1
+Python 3.10.6
+
+OpenCV 4.8.0-dev
+OpenCV-contrib 4.8.0
+hdf5 1.10.10
+eigen 3.4.0
+zlib 1.3
+</code></pre>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h3 id="编译须知"><a href="#编译须知" class="headerlink" title="编译须知"></a>编译须知</h3><blockquote>
+<p><span style="font-size: 1.1em;"><strong>编译前请阅读</strong></span>   </p>
+<ol>
+<li>MinGW与MVSC编译的库文件无法共用！！！！！！！！！！！！</li>
+<li>编译<mark>OpenCV with CUDA</mark>时，请使用VS<br>cmake&#x2F;OpencvDetectCUDA.cmake里面第一行就说了</li>
+</ol>
+<pre><code class="cmake">if((WIN32 AND NOT MSVC) OR OPENCV_CMAKE_FORCE_CUDA)
+  message(STATUS &quot;CUDA compilation is disabled (due to only Visual Studio compiler supported on your platform).&quot;)
+  return()
+endif()  
+</code></pre>
+<p>意思就是Win平台下请乖乖使用MSVC编译CUDA  </p>
+<ol start="3">
+<li>编译选项请按个人需求勾选。使用CUDA时，需要勾选<code>WITH_CUDA</code>和<code>WITH_CUDNN</code>。<br>网上有些教程比较老，现版本OpenCV的兼容性有大提升。大部分以前不能勾选的现在可以勾选了。</li>
+</ol>
+</blockquote>
+<h3 id="编译教程"><a href="#编译教程" class="headerlink" title="编译教程"></a>编译教程</h3><blockquote>
+<p>个人体会：编译中最大难点在环境搭建、依赖库的安装和版本的选择，出了问题排查费神费力。而编译操作按照教程走几乎是傻瓜化操作，没有难度。<br>所以，自己去找教程看。</p>
+</blockquote>
+<p>以下提供一些看过的教程供参考。<br>中文教程：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42218706/article/details/132377836#comments_28922528">windows+Cmake+MinGW+编译opencv4.5 sources安装过程以及opencv踩坑日记</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/stq054188/article/details/132766965">OpenCV4.8 GPU版本CMake编译详细步骤 与CUDA代码演示</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ASFASDGFDGFD/article/details/131683445">Windows10编译OpenCV4.8.0+contrib+CUDA</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/czpdd/article/details/123551542">使用mingw编译opencv遇到的各种问题</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50847463/article/details/132208621">Visual Stdio2022+Opencv4.8.0+Opencv-contrib+Cmake3.27.1</a></p>
+<p>英文教程：<br><a target="_blank" rel="noopener" href="https://docs.opencv.org/4.x/">OpenCV Docs</a><br><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues">OpenCV Issue tracking</a><br><a target="_blank" rel="noopener" href="https://www.jamesbowley.co.uk/qmd/opencv_cuda_python_windows.html#manually-installing-opencv-python-bindings"><strong>Build OpenCV (including Python) with CUDA on Windows</strong></a> (<em>推荐</em>)</p>
+<h3 id="C-配置-minw64-vscode"><a href="#C-配置-minw64-vscode" class="headerlink" title="C++配置(minw64 + vscode)"></a>C++配置(minw64 + vscode)</h3><p>以下为launch.json和tasks.json供参考 </p>
+<div class="tabs" id="tab-表1"><ul class="nav-tabs"><li class="tab active"><a class="#表1-1">launch.json</a></li><li class="tab"><a class="#表1-2">tasks.json</a></li></ul><div class="tab-content"><div class="tab-pane active" id="表1-1"><pre><code class="json">{
+  &quot;version&quot;: &quot;0.2.0&quot;,
+  &quot;configurations&quot;: [
+    { //这个大括号里是我们的‘调试(Debug)’配置
+      &quot;name&quot;: &quot;Debug&quot;, // 配置名称 Opencv4.8.0 Debug
+      &quot;type&quot;: &quot;cppdbg&quot;, // 配置类型，cppdbg对应cpptools提供的调试功能；可以认为此处只能是cppdbg
+      &quot;request&quot;: &quot;launch&quot;, // 请求配置类型，可以为launch（启动）或attach（附加）
+      // &quot;program&quot;: &quot;${fileDirname}\\${fileBasenameNoExtension}.exe&quot;, // 将要进行调试的程序的路径
+      &quot;program&quot;: &quot;${fileDirname}\\bin\\${fileBasenameNoExtension}.exe&quot;, // 单文件
+      &quot;args&quot;: [], // 程序调试时传递给程序的命令行参数，这里设为空即可
+      &quot;stopAtEntry&quot;: false, // 设为true时程序将暂停在程序入口处，相当于在main上打断点
+      &quot;cwd&quot;: &quot;${fileDirname}&quot;, // 调试程序时的工作目录，此处为源码文件所在目录
+      &quot;environment&quot;: [], // 环境变量，这里设为空即可
+      &quot;externalConsole&quot;: false, // 为true时使用单独的cmd窗口，跳出小黑框；设为false则是用vscode的内置终端，建议用内置终端
+      &quot;internalConsoleOptions&quot;: &quot;neverOpen&quot;, // 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡，新手调试用不到
+      &quot;MIMode&quot;: &quot;gdb&quot;, // 指定连接的调试器，gdb是minGW中的调试程序
+      &quot;miDebuggerPath&quot;: &quot;C:\\Program Files\\mingw64\\bin\\gdb.exe&quot;, // 指定调试器所在路径，如果你的minGW装在别的地方，则要改成你自己的路径，注意间隔是\\
+      &quot;setupCommands&quot;: [
+        { // 模板自带，好像可以更好地显示STL容器的内容，具体作用自行Google
+          &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+          &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+          &quot;ignoreFailures&quot;: false
+        }
+      ],
+      &quot;preLaunchTask&quot;: &quot;build&quot; // 调试开始前执行的任务，我们在调试前要编译构建。与tasks.json的label相对应，名字要一样
+    }
+  ]
+}
+</code></pre></div><div class="tab-pane" id="表1-2"><pre><code class="json">{
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;tasks&quot;: [
+    {
+      &quot;label&quot;: &quot;build&quot;,
+      &quot;type&quot;: &quot;shell&quot;, // &quot;shell&quot;
+      &quot;command&quot;: &quot;g++&quot;, //写c++换成g++, 使用环境变量中默认的g++编译器
+      &quot;args&quot;: [
+        &quot;-fdiagnostics-color=always&quot;, // 诊断信息颜色
+        // &quot;${fileDirname}\\*.cpp&quot;, //写c++把 *.c 换成 *.cpp
+        &quot;${file}&quot;, //单文件
+        &quot;-o&quot;,
+        // &quot;${fileDirname}\\${fileBasenameNoExtension}.exe&quot;,
+        &quot;${fileDirname}\\bin\\${fileBasenameNoExtension}.exe&quot;, //单文件
+        &quot;-g&quot;, //生成和调试有关的信息
+        // &quot;-Wall&quot;, // 开启额外警告
+        &quot;-static-libgcc&quot;, // 静态链接libgcc
+        // &quot;-static-libstdc++&quot;, // 静态链接libstdc++
+        &quot;-fexec-charset=GBK&quot;, // 生成程序使用编码GBK
+        // &quot;-finput-charset=UTF-8&quot;,
+        // &quot;-finput-charset=GB2312&quot;, // 编译程序使用GB2312字符集
+        &quot;-std=c++17&quot;, //写c++换成c++标准 default: gnu++14
+        &quot;-I&quot;,
+        &quot;path/to/opencv/include&quot;,
+        &quot;-I&quot;,
+        &quot;path/to/opencv/include/opencv2&quot;,
+        &quot;-L&quot;,
+        &quot;path/to/opencv/x64/mingw/lib&quot;,
+        &quot;-lopencv_world480&quot;,
+        // &quot;-lopencv_world480d.dll&quot;,
+        // &quot;-Wl,--stack=67108864&quot; //powershell要引号将带符号参数变为整体
+      ],
+      &quot;group&quot;: {
+        &quot;kind&quot;: &quot;build&quot;,
+        &quot;isDefault&quot;: true // 不为true时ctrl shift B就要手动选择了
+      },
+      &quot;presentation&quot;: {
+        &quot;echo&quot;: true,
+        &quot;reveal&quot;: &quot;always&quot;, // 执行任务时是否跳转到终端面板，可以为always，silent，never。具体参见VSC的文档
+        &quot;focus&quot;: false, // 设为true后可以使执行task时焦点聚集在终端，但对编译C/C++来说，设为true没有意义
+        &quot;panel&quot;: &quot;shared&quot; // 不同的文件的编译信息共享一个终端面板
+      },
+      &quot;problemMatcher&quot;: &quot;$gcc&quot;,
+      &quot;detail&quot;: &quot;生成可执行文件&quot;
+    },
+    {
+      &quot;label&quot;: &quot;run&quot;,
+      &quot;type&quot;: &quot;shell&quot;, // &quot;shell&quot;
+      &quot;dependsOn&quot;: &quot;build&quot;,
+      // 不使用内置终端
+      // &quot;command&quot;: &quot;${fileDirname}\\${fileBasenameNoExtension}.exe&quot;,
+      &quot;command&quot;: &quot;${fileDirname}\\bin\\${fileBasenameNoExtension}.exe&quot;, // 单文件
+      &quot;group&quot;: {
+        &quot;kind&quot;: &quot;test&quot;,
+        &quot;isDefault&quot;: true
+      },
+      &quot;presentation&quot;: {
+        &quot;echo&quot;: true,
+        &quot;reveal&quot;: &quot;always&quot;,
+        &quot;focus&quot;: true,
+        &quot;panel&quot;: &quot;shared&quot; // &quot;new&quot;
+      }
+    },
+  ]
+}
+</code></pre></div></div></div>
+
+<h3 id="C-配置-VS2019"><a href="#C-配置-VS2019" class="headerlink" title="C++配置(VS2019)"></a>C++配置(VS2019)</h3><p>此处请参考网上教程，<em>经典三个步骤：包含目录、库目录、附加依赖项</em></p>
+<h3 id="Python配置"><a href="#Python配置" class="headerlink" title="Python配置"></a>Python配置</h3><ul>
+<li>编译安装</li>
+</ul>
+<ol>
+<li>移除之前安装的Opencv-python和Opencv-contrib-python</li>
+<li>将<code>PATH_TO_BUILD_DIR\lib\python3\Release\cv2.cpxx-win_amd64.pyd</code>(cpxx为python版本号)放入<code>PATH_TO_PYTHON_DIST\Lib\site-packages\cv2</code>中</li>
+<li>或执行<code>make install</code>命令安装到预设路径<br>或通过VS项目生成INSTALL安装到预设路径</li>
+</ol>
+<ul>
+<li>pip安装</li>
+</ul>
+<ol>
+<li><p>移除之前安装的Opencv-python和Opencv-contrib-python</p>
+</li>
+<li><pre><code class="bash"> pip install opencv-python==4.8.0.74
+ pip install opencv-contrib-cuda-python==4.8.0.74
+</code></pre>
+<p>项目链接<a target="_blank" rel="noopener" href="https://pypi.org/project/opencv-contrib-cuda-python/#history">Pypi: opencv-contrib-cuda-python</a>，截至写作时只有唯一版本4.8.0.74</p>
+</li>
+</ol>
+<p>然后就可以愉快地<code>import cv2</code>了<br>然而。。。你大概率会遇见 <strong><del>最可爱</del></strong> 的错误<a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues/19972">#19972</a>   </p>
+<div class="note bug red"><p><strong></strong></p><p>ImportError: DLL load failed while importing cv2: The specified module could not be found<br>ImportError: DLL load failed while importing cv2: 找不到指定的模块。  </p></div>
+
+<p>错误原因分析和解决方案：<a target="_blank" rel="noopener" href="https://www.jamesbowley.co.uk/nbs/ImportError_dll_load_failed_while_importing_cv2.html">ImportError: DLL load failed while importing cv2: The specified module could not be found.</a><br>解决问题的尝试过程和心路历程：<a target="_blank" rel="noopener" href="https://forum.opencv.org/t/importerror-dll-load-failed-while-importing-cv2-the-specified-module-could-not-be-found/888">ImportError: DLL load failed while importing cv2: The specified module could not be found</a>。下面是这老哥解决问题后的回复，<code>&#39;a good and painful learning experience&#39;</code>，哈哈哈哈哈哈哈哈哈，我debug完也是这个心情。<br><img src="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698671689339.png" class="lazyload" data-srcset="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698671689339.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1698671689339"></p>
+<ul>
+<li>Debug<br><mark><strong>核心思路：找缺失的dll（和报错的字面意思一样）</strong></mark></li>
+</ul>
+<ol>
+<li>检查<code>PATH_TO_PYTHON_DIST\Lib\site-packages\cv2</code>文件是否完整，自己<code>pip install opencv-python</code>对照一下。文件一般都是完整的，但是看一下，免得是低级错误。</li>
+<li>下载<a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/sysinternals/downloads/procmon">process monitor</a>，用于查看<code>python.exe</code>的相关事件，找到缺失的dll。  </li>
+<li>按下图配置事件过滤器<br><img src="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698674377651.png" class="lazyload" data-srcset="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698674377651.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1698674377651"></li>
+<li>重启python，查看<code>python.exe</code>相关事件，找到缺失的dll。<br><img src="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698673943603.png" class="lazyload" data-srcset="/img/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0withcuda/1698673943603.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1698673943603"></li>
+<li>修复缺失dll的几种方法<ul>
+<li>复制到系统路径下，例如<code>C:\Windows\System32</code></li>
+<li>添加到环境变量，例如<code>PATH_TO_HDF5\bin</code> (<em>推荐</em>)</li>
+<li>打开<code>PATH_TO_PYTHON_DIST\Lib\site-packages\cv2\config.py</code>，写入  <pre><code class="python">import os
+
+BINARIES_PATHS = [
+   &#39;PATH_TO_HDF5\bin&#39;,
+   ... # 其他缺失的dll路径
+] + BINARIES_PATHS
+</code></pre>
+(<em>推荐</em>)</li>
+</ul>
+</li>
+</ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><pre><code class="python">import cv2
+device_count = cv2.cuda.getCudaEnabledDeviceCount();
+if (device_count == 0):
+    print(&quot;Error: no CUDA devices found!&quot;)
+else:
+    print(f&quot;Found &#123;device_count&#125; CUDA devices:&quot;)
+    for i in range(device_count):
+        cv2.cuda.printCudaDeviceInfo(i)
+</code></pre>
+<p>输出  </p>
+<pre><code class="log">Found 1 CUDA devices:
+*** CUDA Device Query (Runtime API) version (CUDART static linking) *** 
+
+Device count: 1
+
+Device 0: &quot;NVIDIA GeForce GTX 1650&quot;
+  CUDA Driver Version / Runtime Version          12.20 / 12.20
+  CUDA Capability Major/Minor version number:    7.5
+  Total amount of global memory:                 4096 MBytes (4294639616 bytes)
+  GPU Clock Speed:                               1.51 GHz
+  Max Texture Dimension Size (x,y,z)             1D=(131072), 2D=(131072,65536), 3D=(16384,16384,16384)
+  Max Layered Texture Size (dim) x layers        1D=(32768) x 2048, 2D=(32768,32768) x 2048
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 65536
+  Warp size:                                     32
+  Maximum number of threads per block:           1024
+  Maximum sizes of each dimension of a block:    1024 x 1024 x 64
+  Maximum sizes of each dimension of a grid:     2147483647 x 65535 x 65535
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Concurrent copy and execution:                 Yes with 6 copy engine(s)
+  Run time limit on kernels:                     Yes
+  Integrated GPU sharing Host Memory:            No
+  Support host page-locked memory mapping:       Yes
+  Concurrent kernel execution:                   Yes
+  Alignment requirement for Surfaces:            Yes
+  Device has ECC support enabled:                No
+  Device is using TCC driver mode:               No
+  Device supports Unified Addressing (UVA):      Yes
+  Device PCI Bus ID / PCI location ID:           1 / 0
+  Compute Mode:
+      Default (multiple host threads can use ::cudaSetDevice() with device simultaneously)
+
+deviceQuery, CUDA Driver = CUDART, CUDA Driver Version  = 12.20, CUDA Runtime Version = 12.20, NumDevs = 1
+</code></pre>
+<pre><code class="cpp">#include&lt;stdio&gt;
+using namespace std;
+int main()
+&#123;
+    printf(&quot;Hello World!&quot;);
+    return 0
+&#125;
+</code></pre>
+
+  </div>
+  
   
     
-    <h2 class="article-title" pin itemprop="name headline">
-      <a href="/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/"  itemprop="url">
-        Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019
-      </a>
-    </h2>
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
-  <div class='md article-desc' itemprop="articleBody">
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-31T01:42:25+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年10月31日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opencv/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>opencv</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cuda/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>cuda</p></a></div>
+  <span hidden itemprop="keywords">opencv cuda</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA
-环境准备
-OpenCV 4.8.0 支持新版CUDA(CUDA 12.x)了！！！
-
-mingw64
-mingw-builds-binaries&#x2F;releases
-推荐使用 mingw64_x86_64-11.2.0-release-posix-seh-rt_v9-rev1 
-
-
-版本推荐11.2.0。高版本或...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/&title=Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019 - SHINO’S BLOG&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/&title=Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019 - SHINO’S BLOG&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFKElEQVR42u3aQXIbMRADQP3/0849KdVyMKAcJ82bY0tLNveCYF5f1resFwLw4C3w4C3w4K0C/Ctcf3zhb/8+/dy73x8f6PDz7563PdepF3jw4MGDBw8ePHjwTfjWAW9fVArYusitF3jw4MGDBw8ePHjwN+AfA8Dhz2kAm0JOv/dpv61ABR48ePDgwYMHDx78T4CfBp/0Iqfgpz+nLwJ48ODBgwcPHjx48P8SfKvQ2A5apRcCHjx48ODBgwcPHvxPgm9tfDvgNA066fO2F/dtk2TgwYMHDx48ePDgwS+Cyv/6c+wFHjx48ODBgwcPHnwBfru2Aaf1/dsXZ7vPYy/w4MGDBw8ePHjw4AvwtweUWiDbwabp/q/5gAcPHjx48ODBgwdfgN8OMt0GOn3uKfSnLqpWhIAHDx48ePDgwYMHH8BPwU83fvr7U8ht8dJ6cZ4KHPDgwYMHDx48ePDgm/CfKjzS57aCUKuIOb148ODBgwcPHjx48OA/AT/d+LSAmF5kOnA0DjbLAuZ4v+DBgwcPHjx48ODBF+CfNnoKlR58+vzTv78Ft/UADx48ePDgwYMHD/4G/DTAtIPYFiwNYqeA60IHPHjw4MGDBw8ePPgC/DawtINK63mtC5i+oI/nBw8ePHjw4MGDBw++AP8K1zQgTTc+BU8DXFrYxEESPHjw4MGDBw8ePPgL8NMHbT/3dIC0oEkDT7q/40IFPHjw4MGDBw8ePPgL8K1gkR5kW2RMg9Wtgaa33w8ePHjw4MGDBw8e/AX4FtT0QF/hmhYuaTDcFj/gwYMHDx48ePDgwd+EP914q5hIDzQFbf19+nzw4MGDBw8ePHjw4G/AT4HSDW4HleICIix82kEKPHjw4MGDBw8ePPgG/GnRsL2YW8XFrf1cez548ODBgwcPHjx48AX4doCaDjKlhUKrqGkHuG9LruDBgwcPHjx48OD/K/hbg0TpwdoBZwrZHmgCDx48ePDgwYMHD/4T8F/LNYVoBZr0OdO/W79I4MGDBw8ePHjw4MEX4beQ28C0PVAa4E6h0wGptwNN4MGDBw8ePHjw4MEv4NNiYVwAhINGaeBKLyAtYMYBCjx48ODBgwcPHjz44v/HtwaG0qDVLk7Si2oFpuPkCh48ePDgwYMHDx78AH4agLYFQVpEbEG2QbFVwIAHDx48ePDgwYMH34DffmEamNJCoX2haXESFz3gwYMHDx48ePDgwRfh08Gi6WodZFqYpC/S9AV4fBHAgwcPHjx48ODBg78AnwaN7QBRGrROD54WO6fnOw504MGDBw8ePHjw4MEX4KdFQSsgbQebpnCtz0+LGvDgwYMHDx48ePDgb8CnRUIamKYgabDbFi/tYAUePHjw4MGDBw8e/A34tIBoXVAcSMKBpDSwbYsb8ODBgwcPHjx48OAb8GkB0DpQCjkNXK1iZvt88ODBgwcPHjx48OAb8Nt1G2oLmO5rG+DevpDgwYMHDx48ePDgwRfgW3CtoiENaunAUatIOX4RwIMHDx48ePDgwYMvwk8DUxpgWoDbgaTWQNf44sCDBw8ePHjw4MGDvwCfBojt93yqaNlewLZIAQ8ePHjw4MGDBw/+J8G3/30a7KbBaBrYjv3AgwcPHjx48ODBg/+L4dMBoLSASINSGrSmhRF48ODBgwcPHjx48Dfh0y+cFhnbgan2BaYDW+MBLPDgwYMHDx48ePDgi/DbwZ1twEiDy3Rf6UWkwRI8ePDgwYMHDx48+Bvw1mcXePDgLfDgLfDgrcX6BRSDNUf2NekRAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-26T23:28:01+08:00">2023-10-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-            </div>
-          
+
+
         
-          
-            <div class='post-wrapper'>
-              <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/26/从0搭建博客/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-    <div class='pin'>
-      <img alt="从零使用Hexo框架搭建个人博客小记" src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4cc.svg'/>
-    </div>
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" pin itemprop="name headline">
-      <a href="/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"  itemprop="url">
-        从零使用Hexo框架搭建个人博客小记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        拥有个人博客真的是一件很酷的事呢！
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/'>
+          <p class='title'>从零使用Hexo框架搭建个人博客小记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>拥有个人博客真的是一件很酷的事呢！
 这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍。
 前言平台: Windows
-博客采用Hexo框架搭建，搭建过程理论上可以完全参照Hexo中文文档进行配置。
-Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照Volantis中文文档进行配置。
-具体过程还可以参...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-26T22:34:19+08:00">2023-10-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">教程</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+博客采用Hexo框架搭建，搭...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-            </div>
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-      
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/demo02/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2023/10/21/demo02/">
-        <img itemprop="image" class='headimg' alt="demo02" src='/res/img/OIP-C-2.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/demo02/"  itemprop="url">
-        demo02
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <div class="note "><p>此处为摘要，这是测试样例2。上面的图片为headimg⬆</p></div>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T22:04:37+08:00">2023-10-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="sep"></span><a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/">小类2</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">测试</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB2/" itemprop="url"><span itemprop="name">小类2</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/demo02/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/demo01/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-  
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/demo01/"  itemprop="url">
-        demo01
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        demo01
-测试图片路径能否被正确识别
 
-这是引用的话
+    <div id="layoutHelper-comments"></div>
+
+  </article>
 
 
-这句话高亮
 
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T22:04:26+08:00">2023-10-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="sep"></span><a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/">小类1</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">测试</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95/%E5%B0%8F%E7%B1%BB1/" itemprop="url"><span itemprop="name">小类1</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/demo01/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://sakura-shino.github.io/2023/10/21/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="SHINO’S BLOG">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="SHINO’S BLOG">
-    <meta itemprop="description" content="SHINO的博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/21/hello-world/"  itemprop="url">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-21T17:10:54+08:00">2023-10-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/21/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3197,6 +3305,13 @@ Qu...
     
     
       
+    
+  
+
+  
+    
+    
+      
   
   <section class="widget category desktop pjax">
     
@@ -3261,67 +3376,37 @@ Qu...
     
   
 
+
+<div class="widget-sticky pjax">
+
   
-    
-    
-      
-<section class="widget desktop pjax">
   
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
   <header>
     
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>5 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>3.6k 字</div>
-        </div>
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-10-31 日</div>
-        </div>
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text">环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mingw64"><span class="toc-text">mingw64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VS2019"><span class="toc-text">VS2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMake"><span class="toc-text">CMake</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CUDA-Cuda-Toolkit-cudnn"><span class="toc-text">CUDA: Cuda Toolkit + cudnn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NO-Anaconda"><span class="toc-text">NO Anaconda!!!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenCV-OpenCV-contrib"><span class="toc-text">OpenCV + OpenCV-contrib</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="toc-text">依赖库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%89%88%E6%9C%AC"><span class="toc-text">我的版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-text">编译</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E9%A1%BB%E7%9F%A5"><span class="toc-text">编译须知</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B"><span class="toc-text">编译教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E9%85%8D%E7%BD%AE-minw64-vscode"><span class="toc-text">C++配置(minw64 + vscode)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E9%85%8D%E7%BD%AE-VS2019"><span class="toc-text">C++配置(VS2019)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python%E9%85%8D%E7%BD%AE"><span class="toc-text">Python配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-1"><span class="toc-text">Python</span></a></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
 
-    
   
-
-
-<div class="widget-sticky pjax">
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3345,13 +3430,14 @@ Qu...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4045,7 +4131,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://sakura-shino.github.io/archives/2023/10/","name":"10月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/26/编译安装opencv4.8.0 with cuda/","name":"Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10编译安装 Opencv 4.8.0+contrib+CUDA C++/Python版本 Mingw64/VS2019","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/26/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv4.8.0%20with%20cuda/","wordCount":0,"datePublished":"2023-10-26T15:28:01.888Z","dateModified":"2023-10-30T17:42:25.734Z","articleSection":"教程","keywords":"opencv,cuda","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
