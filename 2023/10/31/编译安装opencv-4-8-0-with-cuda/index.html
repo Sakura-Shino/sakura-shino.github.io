@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-31T07:55:48.000Z">
-<meta property="article:modified_time" content="2023-10-31T12:08:15.593Z">
+<meta property="article:modified_time" content="2023-10-31T12:11:58.315Z">
 <meta property="article:author" content="Shino">
 <meta property="article:tag" content="opencv">
 <meta property="article:tag" content="cuda">
@@ -1880,7 +1880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698754103462),
+    lastupdate: new Date(1698754336851),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","category","tagcloud"],
@@ -3001,7 +3001,7 @@ endif()
 <ol>
 <li>移除之前安装的Opencv-python和Opencv-contrib-python</li>
 <li>将<code>PATH_TO_BUILD_DIR\lib\python3\Release\cv2.cpxx-win_amd64.pyd</code>(cpxx为python版本号)放入<code>PATH_TO_PYTHON_DIST\Lib\site-packages\cv2</code>中</li>
-<li>或执行<code>make install</code>命令安装到预设路径<br>或通过VS项目生成INSTALL安装到预设路径</li>
+<li>或执行<code>make install</code>命令安装到预设路径<br>或通过VS项目生成<code>INSTALL</code>安装到预设路径</li>
 </ol>
 <ul>
 <li>pip安装</li>
@@ -3012,7 +3012,7 @@ endif()
 <li><pre><code class="dos"> pip install opencv-python==4.8.0.74
  pip install opencv-contrib-cuda-python==4.8.0.74
 </code></pre>
-<p>项目链接<a target="_blank" rel="noopener" href="https://pypi.org/project/opencv-contrib-cuda-python/#history">Pypi: opencv-contrib-cuda-python</a>，截至写作时只有唯一版本4.8.0.74</p>
+<p>Pypi项目链接<a target="_blank" rel="noopener" href="https://pypi.org/project/opencv-contrib-cuda-python/#history">Pypi: opencv-contrib-cuda-python</a>，截至写作时只有唯一版本4.8.0.74</p>
 </li>
 </ol>
 <p>然后就可以愉快地<code>import cv2</code>了<br>然而。。。你大概率会遇见 <strong><del>最可爱</del></strong> 的错误<a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues/19972">#19972</a>   </p>
@@ -3169,7 +3169,7 @@ Speedup: 6.09x
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-31T20:08:15+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-31T20:11:58+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年10月31日</p>
@@ -4190,7 +4190,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/31/编译安装opencv-4-8-0-with-cuda/","name":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA","description":"没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/","wordCount":35,"datePublished":"2023-10-31T07:55:48.000Z","dateModified":"2023-10-31T12:08:15.593Z","articleSection":"教程","keywords":"opencv,cuda,python,cpp","image":{"@type":"ImageObject","url":"/img/编译安装opencv4.8.0withcuda/cropped-851-315-735301.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/31/编译安装opencv-4-8-0-with-cuda/","name":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA","description":"没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/","wordCount":35,"datePublished":"2023-10-31T07:55:48.000Z","dateModified":"2023-10-31T12:11:58.315Z","articleSection":"教程","keywords":"opencv,cuda,python,cpp","image":{"@type":"ImageObject","url":"/img/编译安装opencv4.8.0withcuda/cropped-851-315-735301.jpg","width":1024,"height":768}}]</script>
 
 
 
