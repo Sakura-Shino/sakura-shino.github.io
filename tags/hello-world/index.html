@@ -828,7 +828,7 @@ button {
     --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
+    filter: brightness(75%) !important;
   }
   :root:not([color-scheme]) .blur {
     background: rgba(31,31,31,0.9) !important;
@@ -900,7 +900,7 @@ button {
   --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
-  filter: brightness(70%) !important;
+  filter: brightness(75%) !important;
 }
 [color-scheme='dark'] .blur {
   background: rgba(31,31,31,0.9) !important;
@@ -1874,7 +1874,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698688176265),
+    lastupdate: new Date(1698727340199),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","category","tagcloud"],
@@ -2918,7 +2918,7 @@ Qu...
           <li><a class="flat-box"
             title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
             active-action="action-categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>教程</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
@@ -2958,7 +2958,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/cuda/" style="font-size: 14px; color: #999">cuda</a> <a href="/tags/demo/" style="font-size: 19px; color: #777">demo</a> <a href="/tags/hello-world/" style="font-size: 14px; color: #999">hello world</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/opencv/" style="font-size: 14px; color: #999">opencv</a> <a href="/tags/test/" style="font-size: 24px; color: #555">test</a>
+      <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/demo/" style="font-size: 19px; color: #777">demo</a> <a href="/tags/hello-world/" style="font-size: 14px; color: #999">hello world</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/test/" style="font-size: 24px; color: #555">test</a>
     </div>
   </section>
 
@@ -2984,7 +2984,7 @@ Qu...
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>5 篇</div>
+          <div>4 篇</div>
         </div>
       
 
@@ -2999,7 +2999,7 @@ Qu...
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>3.6k 字</div>
+          <div>1k 字</div>
         </div>
       
 
@@ -3488,10 +3488,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   <script>
 
-  volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/a11y-dark.min.css");
+  volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.css");
 
 
-  volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js").then(()=>{
+  volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.js").then(()=>{
     volantis.requestAnimationFrame(hljs.highlightAll)
   })
   volantis.pjax.push(()=>{
