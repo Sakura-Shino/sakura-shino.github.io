@@ -42,11 +42,11 @@
 <meta property="og:title" content="从零使用Hexo框架搭建个人博客小记">
 <meta property="og:url" content="https://sakura-shino.github.io/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="SHINO’S BLOG">
-<meta property="og:description" content="拥有个人博客真的是一件很酷的事呢！ 这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍，提点一下每个步骤的思路。 前言平台: Windows 博客采用Hexo框架搭建，搭建过程理论上可以完全参照Hexo中文文档进行配置。 Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照Volantis中文文档进行配置。">
+<meta property="og:description" content="拥有个人博客真的是一件很酷的事呢！ 这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍，提点一下每个步骤的思路和难点。 前言平台: Windows 博客采用Hexo框架搭建，搭建过程理论上可以完全参照Hexo中文文档进行配置。 Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照Volantis中文文档进行">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-26T14:34:19.237Z">
-<meta property="article:modified_time" content="2023-10-31T13:03:13.767Z">
+<meta property="article:modified_time" content="2023-11-01T12:39:22.216Z">
 <meta property="article:author" content="Shino">
 <meta property="article:tag" content="blog">
 <meta property="article:tag" content="hexo">
@@ -1878,7 +1878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698802292625),
+    lastupdate: new Date(1698842685626),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","category","tagcloud"],
@@ -2831,7 +2831,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p><mark><strong>拥有个人博客真的是一件很酷的事呢！</strong></mark></p>
-<p>这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍，提点一下每个步骤的思路。</p>
+<p>这篇博客面向非科班、有相关知识、但不会建站的小白（说的大概是我了）。配置过程会以概要的方式梳理一遍，提点一下每个步骤的思路和难点。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>平台: Windows</p>
 <p>博客采用Hexo框架搭建，搭建过程理论上可以完全参照<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo中文文档</a>进行配置。</p>
 <p>Hexo框架需要额外配置主题才能有好看的界面，我博客的主题是Volantis，理论上可以完全参照<a target="_blank" rel="noopener" href="https://volantis.js.org/v6/getting-started/">Volantis中文文档</a>进行配置。</p>
@@ -2886,10 +2886,10 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 INFO  Check environment configuration success!
 </code></pre>
 <p><code>http://localhost:4000/</code>为本地服务器地址</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>主题配置难度不高，但阅读文档的过程很漫长。想要拥有个性化的博客，这一步不可或缺。请认真阅读每个主题的官方文档并进行配置。<br>主题的配置文件通常命名为<code>_config.&lt;theme name&gt;.yml</code>，例如Volantis主题的配置文件为<code>_config.volantis.yml</code>  </p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>主题配置难度真不高，但阅读文档的过程很漫长。想要拥有个性化的博客，这一步是必须迈过的。请认真阅读每个主题的官方文档并进行配置。<br>主题的配置文件通常命名为<code>_config.&lt;theme name&gt;.yml</code>，例如Volantis主题的配置文件为<code>_config.volantis.yml</code>  </p>
 <p><em>值得注意的是：使用到的图片等素材选用图床还是本地图片，请根据需求自行斟酌。</em></p>
-<h3 id="Volantis主题"><a href="#Volantis主题" class="headerlink" title="Volantis主题"></a>Volantis主题</h3><p>该主题里里外外均可自定义，请参照<a target="_blank" rel="noopener" href="https://volantis.js.org/v6/getting-started/">Volantis中文文档</a>修改<code>_config.volantis.yml</code>中的配置。</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
+<h3 id="Volantis主题"><a href="#Volantis主题" class="headerlink" title="Volantis主题"></a>Volantis主题</h3><p>该主题里里外外（封面、文档页面、侧边栏、字体、插件···）均可自定义，请参照<a target="_blank" rel="noopener" href="https://volantis.js.org/v6/getting-started/">Volantis中文文档</a>修改<code>_config.volantis.yml</code>中的字段。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h3><ul>
 <li><p>注册Github账号</p>
 </li>
 <li><p>配置ssh</p>
@@ -2911,6 +2911,11 @@ INFO  Check environment configuration success!
 <h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>将新写的博文如<code>test.md</code>放入<code>/source/_post</code>，使用<code>hexo p &amp; hexo d</code>即可发布</p>
 <p><img src="/img/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/2023-10-26-22-48-42-image.png" class="lazyload" data-srcset="/img/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/2023-10-26-22-48-42-image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <center style="font-size:14px;">Hexo-Github发布流程图</center> 
+
+<h3 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h3><p>老师让我们本地部署，姑且提一句：本地可以使用IIS部署，也可以使用nginx部署。<br>IIS的使用就不用教了吧~~~</p>
+<h3 id="草稿的使用"><a href="#草稿的使用" class="headerlink" title="草稿的使用"></a>草稿的使用</h3><p>这里补充一个使用技巧：在官方文档中提供了草稿<code>draft</code>的概念，可以在<code>_drafts</code>文件夹中写文章，然后使用<code>hexo publish</code>命令将草稿发布到<code>_posts</code>文件夹中。<br>下面引用官方文档的说明：</p>
+<div class="note note quote"><p><strong></strong></p><p>创建使用<code>draft</code>模板创建草稿</p><pre><code class="bash">$ hexo new [layout] &lt;title&gt;</code></pre><p>……刚刚提到了 Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到<code> source/_drafts</code> 文件夹，您可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，您也可在命令中指定 <code>layout</code> 来指定布局。</p><pre><code class="bash">$ hexo publish [layout] &lt;title&gt;</code></pre><p>草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是在 _config.yml 中把 render_drafts 参数设为 true 来预览草稿。</p></div>
+
 
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们获得一个属于自己的博客网站。</p>
 
@@ -2937,10 +2942,10 @@ INFO  Check environment configuration success!
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-31T21:03:13+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-01T20:39:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年10月31日</p>
+    <p>更新于：2023年11月1日</p>
   </a>
 </div>
 
@@ -3207,7 +3212,7 @@ mingw-bu...</p>
 
 
     <div class='content'>
-      <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/cpp/" style="font-size: 14px; color: #999">cpp</a> <a href="/tags/cuda/" style="font-size: 14px; color: #999">cuda</a> <a href="/tags/demo/" style="font-size: 19px; color: #777">demo</a> <a href="/tags/hello-world/" style="font-size: 14px; color: #999">hello world</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/opencv/" style="font-size: 14px; color: #999">opencv</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/test/" style="font-size: 24px; color: #555">test</a>
+      <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/cpp/" style="font-size: 14px; color: #999">cpp</a> <a href="/tags/cuda/" style="font-size: 14px; color: #999">cuda</a> <a href="/tags/demo/" style="font-size: 19px; color: #777">demo</a> <a href="/tags/hello-world/" style="font-size: 14px; color: #999">hello world</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/nginx/" style="font-size: 14px; color: #999">nginx</a> <a href="/tags/opencv/" style="font-size: 14px; color: #999">opencv</a> <a href="/tags/piiv/" style="font-size: 14px; color: #999">piiv</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/test/" style="font-size: 24px; color: #555">test</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a>
     </div>
   </section>
 
@@ -3232,7 +3237,7 @@ mingw-bu...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%99"><span class="toc-text">建站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">修改配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Volantis%E4%B8%BB%E9%A2%98"><span class="toc-text">Volantis主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-text">发布文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%99"><span class="toc-text">建站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">修改配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Volantis%E4%B8%BB%E9%A2%98"><span class="toc-text">Volantis主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="toc-text">部署到GitHub</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-text">发布文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2"><span class="toc-text">本地部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%89%E7%A8%BF%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">草稿的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
     </div>
   </section>
 
@@ -3708,31 +3713,30 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   <script>
 
-  volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.css");
+        volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.css");
 
 
-  volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.js").then(()=>{
-    volantis.requestAnimationFrame(hljs.highlightAll)
-  })
-  volantis.pjax.push(()=>{
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightElement(block);
-    });
-  },"highlightjs")
+        volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.js").then(() => {
+            volantis.requestAnimationFrame(hljs.highlightAll)
+        })
+        volantis.pjax.push(() => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        }, "highlightjs")
+            
 
-
-  function pjax_highlightjs_copyCode(){
-    if (!(document.querySelector(".highlight .code pre") ||
-      document.querySelector(".article pre code"))) {
-      return;
-    }
-    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-  }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
-
+        function pjax_highlightjs_copyCode() {
+            if (!(document.querySelector(".highlight .code pre") ||
+                document.querySelector(".article pre code"))) {
+                return;
+            }
+            VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+        }
+        volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+        volantis.pjax.push(pjax_highlightjs_copyCode)
+            
 </script>
-
 
 
 
@@ -3970,7 +3974,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/26/从0搭建博客/","name":"从零使用Hexo框架搭建个人博客小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"从零使用Hexo框架搭建个人博客小记","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/","wordCount":0,"datePublished":"2023-10-26T14:34:19.237Z","dateModified":"2023-10-31T13:03:13.767Z","articleSection":"教程","keywords":"blog,hexo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/26/从0搭建博客/","name":"从零使用Hexo框架搭建个人博客小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"从零使用Hexo框架搭建个人博客小记","description":"SHINO的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/26/%E4%BB%8E0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/","wordCount":0,"datePublished":"2023-10-26T14:34:19.237Z","dateModified":"2023-11-01T12:39:22.216Z","articleSection":"教程","keywords":"blog,hexo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
