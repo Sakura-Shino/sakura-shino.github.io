@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-31T07:55:48.000Z">
-<meta property="article:modified_time" content="2023-11-01T00:20:32.506Z">
+<meta property="article:modified_time" content="2023-11-01T01:27:20.013Z">
 <meta property="article:author" content="Shino">
 <meta property="article:tag" content="opencv">
 <meta property="article:tag" content="cuda">
@@ -111,7 +111,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Consolas, Monaco, Menlo, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Aria, UbuntuMono, Menlo, Monaco, monospace, sans-serif;
+  font-family: "Varela Round", Consolas, Monaco, Menlo, "PingFang SC", "Microsoft YaHei", Helvetica, Aria, UbuntuMono, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -1099,7 +1099,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Consolas, Monaco, Menlo, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Aria, UbuntuMono, Menlo, Monaco, monospace, sans-serif;
+  font-family: "Varela Round", Consolas, Monaco, Menlo, "PingFang SC", "Microsoft YaHei", Helvetica, Aria, UbuntuMono, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -1880,7 +1880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698801679019),
+    lastupdate: new Date(1698802292625),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","category","tagcloud"],
@@ -2859,7 +2859,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p> <span style="font-size: 1.1em;"><strong>如何屏蔽Anaconda</strong></span></p>
 <ol>
-<li>可以通过修改<code>CMakeLists.txt</code>中的<code>find_package</code>语句来解决。例如：<code>SET (ONNXRUNTIME_DIR path/to/onnxruntime</code>)</li>
+<li>可以通过修改<code>CMakeLists.txt</code>中的<code>find_package</code>语句来解决。例如：<code>SET (ONNXRUNTIME_DIR path/to/onnxruntime)</code></li>
 <li>暂时将Anaconda有关路径移出环境变量，或在Anaconda中移除相关库。</li>
 <li>(<strong>最优方案</strong>)在系统环境变量中设置指定的库路径，且一定要将位置放在Anaconda路径之前。<br><em>优先级比较：系统环境变量 &gt; 用户环境变量  位置靠前 &gt; 位置靠后</em></li>
 </ol>
@@ -3169,7 +3169,7 @@ Speedup: 6.09x
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-01T08:20:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-01T09:27:20+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年11月1日</p>
@@ -4190,7 +4190,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/31/编译安装opencv-4-8-0-with-cuda/","name":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA","description":"没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/","wordCount":35,"datePublished":"2023-10-31T07:55:48.000Z","dateModified":"2023-11-01T00:20:32.506Z","articleSection":"教程","keywords":"opencv,cuda,python,cpp","image":{"@type":"ImageObject","url":"/img/编译安装opencv4.8.0withcuda/cropped-851-315-735301.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","sameAs":["https://github.com/volantis-x"],"description":"SHINO的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://sakura-shino.github.io/","name":"SHINO’S BLOG"}},{"@type":"ListItem","position":2,"item":{"@id":"https://sakura-shino.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://sakura-shino.github.io/2023/10/31/编译安装opencv-4-8-0-with-cuda/","name":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","keywords":null,"description":"SHINO的博客","author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/","description":"SHINO的博客"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","url":"https://sakura-shino.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://sakura-shino.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Win10使用mingw64/VS2019编译安装 Opencv 4.8.0(including Python) with CUDA","description":"没有CUDA怎么跑模型？ 快来手动编译Opencv with CUDA","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/"},"author":{"@type":"Person","name":"Shino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://sakura-shino.github.io/"},"publisher":{"@type":"Organization","name":"SHINO’S BLOG","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://sakura-shino.github.io/2023/10/31/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85opencv-4-8-0-with-cuda/","wordCount":35,"datePublished":"2023-10-31T07:55:48.000Z","dateModified":"2023-11-01T01:27:20.013Z","articleSection":"教程","keywords":"opencv,cuda,python,cpp","image":{"@type":"ImageObject","url":"/img/编译安装opencv4.8.0withcuda/cropped-851-315-735301.jpg","width":1024,"height":768}}]</script>
 
 
 
