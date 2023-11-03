@@ -2150,6 +2150,17 @@ img.lazyload:not(.placeholder).loaded {
   color: #ff5722;
   border-color: #ff5722;
 }
+.md .table {
+  overflow: autos;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.md .table table {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: table;
+  width: 100%;
+}
 #l_main .prev-next {
   width: 100%;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
